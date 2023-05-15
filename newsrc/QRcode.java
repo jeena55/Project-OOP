@@ -4,16 +4,12 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class QRcode {
-        private JTextField tx;
+public class QRcode{
         public QRcode(){
         JFrame frame = new JFrame("QRcode");
         JPanel p = new JPanel();
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
-        
-        tx = new JTextField("TOTAL AMOUNT = 1500$");
-        tx.setEditable(false);
         // Create a JLabel for preview
         JLabel previewLabel = new JLabel();
         previewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -26,7 +22,6 @@ public class QRcode {
         previewLabel.setIcon(imageIcon);
 
         // Add the preview label to the JFrame
-        p.add(tx);
         frame.setLayout(new BorderLayout());
         frame.add(previewLabel, BorderLayout.NORTH);
         frame.add(p, BorderLayout.CENTER);

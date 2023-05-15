@@ -18,6 +18,7 @@ public class SerchDataBill {
     private String presentpayment;
     private String consumtion;
     private String unitused;
+    private boolean check = true;
     
 
     public SerchDataBill(String date, String yearCheck, String num_Bill){
@@ -70,13 +71,21 @@ public class SerchDataBill {
                 vat7 = va_database;
                 final_amount = fin_database;
             } else {
-                System.out.println("No user found with num_Bill: "+ num_Bill);
+                check = false;
             }
             
         } catch (SQLException e) {
             System.out.println("Failed to retrieve data from the database.");
             e.printStackTrace();
         }
+    }
+
+    public boolean isCheck() {
+        return check;
+    }
+
+    public void setCheck(boolean check) {
+        this.check = check;
     }
 
     public String getUnitused() {

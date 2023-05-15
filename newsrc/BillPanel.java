@@ -386,6 +386,7 @@ public class BillPanel extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SerchDataBill ya = new SerchDataBill(jTextField2.getText(), jTextField1.getText(), jTextField3.getText());
         ya.serch();
+        if (ya.isCheck()){
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Electric Cost", ya.getElec()},
@@ -416,6 +417,42 @@ public class BillPanel extends javax.swing.JPanel {
         Presentlabel.setText(ya.getPresentpayment());
         jLabel24.setText(ya.getConsumtion());
         jLabel21.setText(ya.getUnitused());
+        }
+        else{   
+            jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Electric Cost", },
+                {"Monthly payment",},
+                {"FT. discount",},
+                {"Discount", },
+                {"Total", },
+                {"VAT 7%", },
+                {"Final Amount", },
+                {null, null}
+            },
+            new String [] {
+                "Item Lists", "Price"
+            }
+        ){
+            boolean[] canEdit = new boolean [] {
+                false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+            jTextField2.setText("");
+            jTextField1.setText("");
+            jTextField3.setText("");
+            DistrcitLabel.setText("");
+            CustomerLabel.setText("");
+            AddresLabel.setText("");
+            Pastlabel.setText("");
+            Presentlabel.setText("");
+            jLabel24.setText("");
+            jLabel21.setText("");
+        }
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
