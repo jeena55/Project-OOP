@@ -2,7 +2,7 @@
 import java.sql.*;
 import java.util.Arrays;
 
-public class SerchStatement {
+public class SerchStatement implements Statement_itf{
 
     private String month = "", year = "", pay = "", unit = "", bill = "", outstand = "";
 
@@ -30,31 +30,32 @@ public class SerchStatement {
         }
     }
 
+    @Override
     public String getMonth() {
         return month;
     }
-
+    @Override
     public String getYear() {
         return year;
     }
-
+    @Override
     public String getPay() {
         return pay;
     }
-
+    @Override
     public String getUnit() {
         return unit;
     }
-
+    @Override
     public String getBill() {
         return bill;
     }
-
+    @Override
     public String getOutstand() {
         return outstand;
     }
 //   , String year, String pay, String unit, String bill, String outstand
-
+    @Override
     public void checkYear(String year) {
         switch (year) {
             case "65" -> {
@@ -66,6 +67,7 @@ public class SerchStatement {
         }
     }
 
+    @Override
     public void checkMonth(String month) {
         switch (month) {
             case "01" -> {

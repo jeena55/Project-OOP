@@ -1,7 +1,7 @@
 
 import java.text.DecimalFormat;
 
-public class Cost_Electrical {
+public class Cost_Electrical extends Cost_Elec_Abstract{
 
     private String name;
     private String id;
@@ -22,34 +22,42 @@ public class Cost_Electrical {
         this.elecRate = rate;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getId() {
         return id;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public void setId(String id) {
         this.id = id;
     }
 
+    @Override
     public void setTime(String time) {
         this.time = time;
     }
 
+    @Override
     public void setElecUsed(String used) {
         this.elecUsed = used;
     }
 
+    @Override
     public void setElecRate(String rate) {
         this.elecRate = rate;
     }
 
+    @Override
     public String getCost() {
         double dou_elecUsed = Double.parseDouble(elecUsed);
         double dou_elecRate = Double.parseDouble(elecRate);
@@ -61,10 +69,12 @@ public class Cost_Electrical {
         return String.valueOf(cost);
     }
 
+    @Override
     public void setTotal(double cost) {
         total += cost;
     }
 
+    @Override
     public double getTotal() {
         return total;
     }
