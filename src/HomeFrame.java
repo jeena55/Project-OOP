@@ -191,45 +191,48 @@ public class HomeFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Bill Payment
-        BillPanel billp = new BillPanel();
-        jpload.jPanelLoader(jPanel_load, billp);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        StatementPanel stmp = new StatementPanel();
-        jpload.jPanelLoader(jPanel_load, stmp);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Home Page
+// Home Page
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {        
         HomePanel hmp = new HomePanel();
         jpload.jPanelLoader(jPanel_load, hmp);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }   
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        AnalysisPanel alp = new AnalysisPanel();
-        jpload.jPanelLoader(jPanel_load, alp);
-    }//GEN-LAST:event_jButton5ActionPerformed
+ // Bill Payment
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        BillPanel billp = new BillPanel();
+        jpload.jPanelLoader(jPanel_load, billp);
+    }
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        OtherServiceFrame bkf = new OtherServiceFrame();
-        bkf.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+//Statement
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        StatementPanel stmp = new StatementPanel();
+        jpload.jPanelLoader(jPanel_load, stmp);
+    }
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // EML
+// Electric List
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {
         ElectricListFrame elp = new ElectricListFrame();
         jpload.jPanelLoader(jPanel_load, elp);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // LOGOUT
+//Price Analysis
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+        AnalysisPanel alp = new AnalysisPanel();
+        jpload.jPanelLoader(jPanel_load, alp);
+    }
+
+//Other Service
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        OtherServiceFrame bkf = new OtherServiceFrame();
+        bkf.setVisible(true);
+    }
+
+// LOGOUT
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);
         LoginView login = new LoginView();
         login.setVisible(true);
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

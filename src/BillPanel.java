@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class BillPanel extends javax.swing.JPanel {
+public class BillPanel extends javax.swing.JPanel{
 
     private String month, year, pay, unit, final_amount, outstand;
     private QRcode qr;
@@ -308,7 +308,7 @@ public class BillPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         SerchDataBill ya = new SerchDataBill(jTextField2.getText(), jTextField1.getText(), jTextField3.getText());
         ya.serch();
         this.month = ya.getDate();
@@ -319,9 +319,9 @@ public class BillPanel extends javax.swing.JPanel {
         this.pay = String.valueOf(time);
         this.outstand = "Paid";
         qr = new QRcode(this.final_amount, this.month, this.year, this.pay, this.unit, this.final_amount, this.outstand);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         SerchDataBill ya = new SerchDataBill(jTextField2.getText(), jTextField1.getText(), jTextField3.getText());
         ya.serch();
         if (ya.isCheck()) {
@@ -390,7 +390,7 @@ public class BillPanel extends javax.swing.JPanel {
             jLabel21.setText("");
 
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
     public String getjTextField1() {
         return String.valueOf(jTextField1.getText());

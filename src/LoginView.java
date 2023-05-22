@@ -185,7 +185,8 @@ public class LoginView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel2ComponentShown
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+//Login
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             String query = "SELECT * FROM login WHERE id_number = ? and tel_number = ?";
             PreparedStatement pst = Connector.mycon().prepareStatement(query);
@@ -203,16 +204,12 @@ public class LoginView extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
+    private void registerActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);
         new RegisterView().setVisible(true);
-    }//GEN-LAST:event_registerActionPerformed
-
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

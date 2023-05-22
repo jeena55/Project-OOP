@@ -372,7 +372,7 @@ public class ElectricListFrame extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_usedtimeActionPerformed
 
-    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
+    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {
         // Save button
         String name = elecname.getText();
         String id = idnum.getText();
@@ -404,13 +404,13 @@ public class ElectricListFrame extends javax.swing.JPanel {
         }
         tb_save();
         tb_load();
-    }//GEN-LAST:event_addbtnActionPerformed
+    }
 
     private void usedrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usedrateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usedrateActionPerformed
 
-    private void updbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updbtnActionPerformed
+    private void updbtnActionPerformed(java.awt.event.ActionEvent evt) {
         // Update button
         String name = elecname.getText();
         String id = idnum.getText();
@@ -444,18 +444,18 @@ public class ElectricListFrame extends javax.swing.JPanel {
         }
         tb_save();
         tb_load();
-    }//GEN-LAST:event_updbtnActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // Clear button
         elecname.setText("");
         idnum.setText("");
         usedtime.setText("");
         usedrate.setText("");
         etr.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void delbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delbtnActionPerformed
+    private void delbtnActionPerformed(java.awt.event.ActionEvent evt) {
         // Remove button
         String id = idnum.getText();
         int r = jTable1.getSelectedRow();
@@ -483,9 +483,9 @@ public class ElectricListFrame extends javax.swing.JPanel {
         etr.setText("");
         tb_save();
         tb_load();
-    }//GEN-LAST:event_delbtnActionPerformed
+    }
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         // Mouse Clicked
         int r = jTable1.getSelectedRow();
         String rname = jTable1.getValueAt(r, 0).toString();
@@ -498,7 +498,7 @@ public class ElectricListFrame extends javax.swing.JPanel {
         usedtime.setText(rtime);
         usedrate.setText(rrate);
         etr.setText(relrate);
-    }//GEN-LAST:event_jTable1MouseClicked
+    }
 
     private void etrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etrActionPerformed
         // TODO add your handling code here:
@@ -508,14 +508,14 @@ public class ElectricListFrame extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchbarActionPerformed
 
-    private void searchbarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchbarKeyReleased
+    private void searchbarKeyReleased(java.awt.event.KeyEvent evt) {
         // searchbar
         String search = searchbar.getText();
         DefaultTableModel dtm4 = (DefaultTableModel) jTable1.getModel();
         TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>(dtm4);
         jTable1.setRowSorter(obj);
         obj.setRowFilter(RowFilter.regexFilter(search));
-    }//GEN-LAST:event_searchbarKeyReleased
+    }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:

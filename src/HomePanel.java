@@ -308,25 +308,24 @@ public class HomePanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         BillPanel billp = new BillPanel();
         jpload.jPanelLoader(this, billp);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         ElectricListFrame elp = new ElectricListFrame();
         jpload.jPanelLoader(this, elp);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         AnalysisPanel alp = new AnalysisPanel();
         jpload.jPanelLoader(this, alp);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }
 
-    private void jLabel8AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel8AncestorAdded
+    private void jLabel8AncestorAdded(javax.swing.event.AncestorEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8AncestorAdded
-
+    }//GEN-LAST:event_jLabel8AncestorAddedF
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

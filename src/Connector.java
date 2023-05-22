@@ -6,7 +6,7 @@ public class Connector {
     public static Connection mycon() {
         String url = "jdbc:mysql://localhost/projectoop";
         String username = "root";
-        String password = "0631174147";
+        String password = "493937Aina";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);

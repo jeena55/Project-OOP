@@ -34,22 +34,21 @@ public class StatementPanel extends javax.swing.JPanel {
                 String value4 = rs.getString(4);
                 String value5 = rs.getString(5);
                 num = 0.0;
-//                String value6 = rs.getString(6);
 
                 if (value1 == null) {
-                    value1 = "";  // Set a default value for null
+                    value1 = "";
                 }
                 if (value2 == null) {
-                    value2 = "";  // Set a default value for null
+                    value2 = "";
                 }
                 if (value3 == null) {
-                    value3 = "";  // Set a default value for null
+                    value3 = "";
                 }
                 if (value4 == null) {
-                    value4 = "";  // Set a default value for null
+                    value4 = "";
                 }
                 if (value5 == null) {
-                    value5 = "";  // Set a default value for null
+                    value5 = "";
                 }
 
                 v.add(value1);
@@ -203,7 +202,7 @@ public class StatementPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         new StatementPanel();
         String selectedYear = (String) jComboBox2.getSelectedItem();
         if (selectedYear.equals("2565")) {
@@ -219,22 +218,21 @@ public class StatementPanel extends javax.swing.JPanel {
                     String value3 = rs.getString(3);
                     String value4 = rs.getString(4);
                     String value5 = rs.getString(5);
-//                String value6 = rs.getString(6);
 
                     if (value1 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = ""; 
                     }
                     if (value2 == null) {
-                        value2 = "";  // Set a default value for null
+                        value2 = ""; 
                     }
                     if (value3 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = "";  
                     }
                     if (value4 == null) {
-                        value2 = "";  // Set a default value for null
+                        value2 = "";  
                     }
                     if (value5 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = "";  
                     }
 
                     v.add(value1);
@@ -263,19 +261,19 @@ public class StatementPanel extends javax.swing.JPanel {
 //                String value6 = rs.getString(6);
 
                     if (value1 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = ""; 
                     }
                     if (value2 == null) {
-                        value2 = "";  // Set a default value for null
+                        value2 = "";  
                     }
                     if (value3 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = "";  
                     }
                     if (value4 == null) {
-                        value2 = "";  // Set a default value for null
+                        value2 = ""; 
                     }
                     if (value5 == null) {
-                        value1 = "";  // Set a default value for null
+                        value1 = ""; 
                     }
 
                     v.add(value1);
@@ -290,7 +288,7 @@ public class StatementPanel extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

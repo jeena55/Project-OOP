@@ -8,6 +8,25 @@ public class FailureReportFrame extends javax.swing.JInternalFrame {
         initComponents();
     }
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (jComboBox1.getSelectedItem().equals("Please select the choice below") || jTextField1.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter the reports choice and Your Address");
+        } else {
+            try {
+                String combo = (String) jComboBox1.getSelectedItem();
+                Statement s = Connector.mycon().createStatement();
+                s.executeUpdate("INSERT INTO failure(report, description, address)"
+                        + "VALUES ('" + combo + "','" + jTextArea1.getText() + "','" + jTextField1.getText() + "')");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            JOptionPane.showMessageDialog(this, "Your requirements was sent to Kanfaifah sucessfully");
+        }
+        jComboBox1.setSelectedIndex(0);
+        jTextArea1.setText("");
+        jTextField1.setText("");
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -188,27 +207,6 @@ public class FailureReportFrame extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (jComboBox1.getSelectedItem().equals("Please select the choice below") || jTextField1.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter the reports choice and Your Address");
-        } else {
-            try {
-                String combo = (String) jComboBox1.getSelectedItem();
-                Statement s = Connector.mycon().createStatement();
-                s.executeUpdate("INSERT INTO failure(report, description, address)"
-                        + "VALUES ('" + combo + "','" + jTextArea1.getText() + "','" + jTextField1.getText() + "')");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            JOptionPane.showMessageDialog(this, "Your requirements was sent to Kanfaifah sucessfully");
-        }
-        jComboBox1.setSelectedIndex(0);
-        jTextArea1.setText("");
-        jTextField1.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;

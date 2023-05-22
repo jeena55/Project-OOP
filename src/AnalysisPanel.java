@@ -123,7 +123,7 @@ public class AnalysisPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String tx = (String) jComboBox1.getSelectedItem();
         if (tx.equals("Linear graph")) {
             BarChartPanel bp = new BarChartPanel();
@@ -134,7 +134,7 @@ public class AnalysisPanel extends javax.swing.JPanel {
             bx.setMonth();
             jpload.jPanelLoader(jPanel2, bx);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -10,7 +10,36 @@ public class BookingInterFrame extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    @SuppressWarnings("unchecked")
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (a.getText().equals("") || b.getText().equals("") || c.getText().equals("") || d.getText().equals("")
+                || e.getText().equals("") || f.getText().equals("") || g.getText().equals("") || h.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter All Data");
+        } else {
+            try {
+                Statement s = Connector.mycon().createStatement();
+                s.executeUpdate("INSERT INTO booking(Name, Cid, Email, Tel, Epid, Address, District, State)"
+                        + "VALUES ('" + a.getText() + "','" + b.getText() + "','" + c.getText() + "','" + d.getText() + "','" 
+                        + e.getText() + "','" + f.getText() + "','" + g.getText() + "','" + h.getText() + "')");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            JOptionPane.showMessageDialog(this, "Your requirements was sent to Kanfaifah sucessfully");
+        }
+        a.setText("");
+        b.setText("");
+        c.setText("");
+        d.setText("");
+        e.setText("");
+        f.setText("");
+        g.setText("");
+        h.setText("");
+    }
+
+    private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
+
+    }//GEN-LAST:event_bActionPerformed
+
+@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -260,36 +289,6 @@ public class BookingInterFrame extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (a.getText().equals("") || b.getText().equals("") || c.getText().equals("") || d.getText().equals("")
-                || e.getText().equals("") || f.getText().equals("") || g.getText().equals("") || h.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter All Data");
-        } else {
-            try {
-                Statement s = Connector.mycon().createStatement();
-                s.executeUpdate("INSERT INTO booking(Name, Cid, Email, Tel, Epid, Address, District, State)"
-                        + "VALUES ('" + a.getText() + "','" + b.getText() + "','" + c.getText() + "','" + d.getText() + "','" + e.getText() + "','" + f.getText() + "','" + g.getText() + "','" + h.getText() + "')");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            JOptionPane.showMessageDialog(this, "Your requirements was sent to Kanfaifah sucessfully");
-        }
-        a.setText("");
-        b.setText("");
-        c.setText("");
-        d.setText("");
-        e.setText("");
-        f.setText("");
-        g.setText("");
-        h.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
-
-    }//GEN-LAST:event_bActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField a;
     private javax.swing.JTextField b;
